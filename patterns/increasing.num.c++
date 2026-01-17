@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void increasingenum(int r)
+void increasing_num(int r)
 {
     int n = 1;
     for (int i = 1; i <= r; i++)
@@ -20,7 +20,7 @@ int main()
     int r;
     cin >> r;
 
-    increasingenum(r);
+    increasing_num(r);
 
     return 0;
 }
