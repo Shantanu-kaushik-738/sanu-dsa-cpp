@@ -10,7 +10,6 @@ public:
         { // base case
             return;
         }
-
         cout << current << endl;
         one_to_n(current + 1, n);
     }
