@@ -20,6 +20,7 @@ public:
                     idx = st;
                     ans = arr[st];
                 }
+                break;
             }
 
             if (arr[st] <= arr[mid])
