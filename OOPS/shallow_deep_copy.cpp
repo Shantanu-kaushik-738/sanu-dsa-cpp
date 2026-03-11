@@ -30,13 +30,13 @@ public:
 
 int main()
 {
-    student s1("sanu", 7.3);
+    student s1("aman", 8.4);
 
     student s2(s1);
-    *(s2.cgpaptr) = 7.83; // shallow pointer
+    *(s2.cgpaptr) = 9.43; // shallow pointer
     s1.getinfo();
 
-    s2.name = "sanuu";
+    s2.name = "kalam";
     s2.getinfo();
 
     return 0;

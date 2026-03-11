@@ -29,7 +29,7 @@ public:
 
 int main()
 {
-    student s1("sanu", 7.3);
+    student s1("krish", 8.3);
     s1.getinfo();
 
     return 0;

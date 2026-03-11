@@ -72,9 +72,9 @@ int main()
 {
     Teacher t1; // non-parameterized constructor called (auto)
 
-    t1.name = "sanu";
+    t1.name = "rahul";
     t1.subject = "cpp";
-    t1.setSalary(786.42);
+    t1.setSalary(546.42);
 
     cout << t1.name << endl;
     cout << t1.department << endl;
@@ -83,7 +83,7 @@ int main()
 
     cout << endl;
 
-    Teacher t2("Sanu", "cse", "c++", 420.18); // parameterized constructor
+    Teacher t2("babblu", "cse", "c++", 140.18); // parameterized constructor
     t2.getinfo();
 
     cout << endl;

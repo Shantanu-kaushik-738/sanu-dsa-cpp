@@ -33,7 +33,7 @@ int main()
 {
     Teacher t1; // object
 
-    t1.name = "sanu";
+    t1.name = "aman";
     t1.department = "computer science";
     t1.subject = "cpp";
     t1.setSalary(786.42);
