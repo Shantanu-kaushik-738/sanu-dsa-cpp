@@ -1,44 +1,44 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class person
+class Person
 {
 public:
     string name;
     int age;
 
-    person()
+    Person()
     { // non-parameterized constructor
         cout << "parent constructor" << endl;
     }
 
-    person(string name, int age)
+    Person(string name, int age)
     { // parameterized constructor
         this->name = name;
         this->age = age;
     }
 };
 
-class teacher
+class Teacher
 {
 public:
     string subject;
     double salary;
 };
 
-class trainer : public person
+class trainer : public Person
 { // hierarchial inheritance
 public:
     string traningsub;
 };
 
-class assistent : public person
+class assistent : public Person
 { // hierarchial inheritance
 public:
     string university;
 };
 
-class TA : public person, public teacher
+class TA : public Person, public Teacher
 { // multiple  inheritence
 public:
     TA()
@@ -55,17 +55,17 @@ public:
     }
 };
 
-class student : public person
+class Student : public Person
 { // single  inheritence
 public:
     int rollno;
 
-    student()
+    Student()
     { // non-parameterized constructor
         cout << "child constructor" << endl;
     }
 
-    student(string name, int age, int rollno) : person(name, age)
+    Student(string name, int age, int rollno) : Person(name, age)
     { // parameterized constructor
         this->rollno = rollno;
     }
@@ -78,14 +78,14 @@ public:
     }
 };
 
-class gradstudent : public student
+class Gradstudent : public Student
 { // multi-level inheritence
 public:
     string researcharea;
 
-    gradstudent()
+    Gradstudent()
     { // non-parameterized constructor
-        cout << "gradstudent constructor" << endl;
+        cout << "Gradstudent constructor" << endl;
     }
 
     void getinfo()
@@ -99,16 +99,16 @@ public:
 
 int main()
 {
-    student s1;
+    Student s1;
     s1.name = "lucky";
     s1.age = 21;
     s1.rollno = 12345;
     s1.getinfo();
 
-    student s2("chotuu", 24, 4567);
+    Student s2("chotuu", 24, 4567);
     s2.getinfo();
 
-    gradstudent gs1;
+    Gradstudent gs1;
     gs1.name = "neha";
     gs1.age = 22;
     gs1.rollno = 1345;

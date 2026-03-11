@@ -1,20 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class student
+class Student
 {
 public:
     string name;
     double *cgpaptr;
 
-    student(string name, double cgpa)
+    Student(string name, double cgpa)
     { // constructor
         this->name = name;
         cgpaptr = new double;
         *cgpaptr = cgpa;
     }
 
-    student(student &x)
+    Student(Student &x)
     { // constructor
         this->name = x.name;
         cgpaptr = new double;
@@ -30,9 +30,9 @@ public:
 
 int main()
 {
-    student s1("aman", 8.4);
+    Student s1("aman", 8.4);
 
-    student s2(s1);
+    Student s2(s1);
     *(s2.cgpaptr) = 9.43; // shallow pointer
     s1.getinfo();
 

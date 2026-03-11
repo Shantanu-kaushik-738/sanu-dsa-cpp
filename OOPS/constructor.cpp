@@ -11,6 +11,7 @@ public:
     string name;
     string department;
     string subject;
+    double *cgpaptr;
 
     Teacher()
     { // non-parameterized constructor
@@ -43,6 +44,19 @@ public:
         this->salary = y.salary;
     }
 
+    Teacher(string name, double cgpa)
+    { // constructor
+        this->name = name;
+        cgpaptr = new double;
+        *cgpaptr = cgpa;
+    }
+
+    ~Teacher()
+    { // destructor //ye pointer obj ke memory ko delete kr deta hai automatically
+        cout << "destructor" << endl;
+        delete cgpaptr;
+    }
+
     // method   /   member function
     void changedept(string newdept)
     {
@@ -58,7 +72,7 @@ public:
     { // getter
         return salary;
     }
-    
+
     void getinfo()
     {
         cout << name << endl;
@@ -88,8 +102,11 @@ int main()
 
     cout << endl;
 
-    Teacher t3(t2); 
+    Teacher t3(t2);
     t3.getinfo();
+
+    Teacher s1("krish", 8.3);
+    s1.getinfo();
 
     return 0;
 }
